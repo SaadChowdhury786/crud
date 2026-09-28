@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'add' %}">Add</a>
+     {% for emp in emps %}
+    <h1>{{emp.name}}</h1>
+    <h1>{{emp.roll}}</h1>
+    <a href="{%url 'update' emp.id %}">Update</a>
+     <a href="{%url 'delete' emp.id %}">Delete</a>
+     <a href="{%url 'detail' emp.id %}">Detail</a>
+      {% endfor %}
+</body>
+</html>
